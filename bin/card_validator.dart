@@ -9,9 +9,7 @@ void main() {
 bool validateCardNumber(int cardNumber) {
   var numberList = cardNumber.toString().split('');
   var lastNumber = int.parse(numberList.removeLast());
-
   var sumElements = calculateElementsFromList(numberList);
-
   var finalNumber = 10 - (sumElements % 10) >= 10 ? 0 : 10 - (sumElements % 10);
 
   return finalNumber == lastNumber;
